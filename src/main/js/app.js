@@ -11,6 +11,7 @@ function App(props) {
     const settingName ='default';
     const [fanSettings, setFanSettings] =useState({fanSettingsId: 0, name: settingName, speed: 0, direction: 0});
     const [needUpdate, setNeedUpdate] =useState(false);
+    const imgRef =useRef(null);
     const rotation = useRef(0);
     const myCanvasSpeed =useRef(null);
     const myCanvasDirection =useRef(null);
@@ -25,6 +26,8 @@ function App(props) {
         ].map((o) => {
             drawCords({canvas: o.canvas, pulled: false});
         })
+        
+        // imgRef.src = { imgFanUrl };
         
         // retrieve the current settings from Mysql db on page load
         fetch('/fansettings/?name=' + settingName)
@@ -201,7 +204,7 @@ function App(props) {
             <br /><br /><br /><br />
             <div>
                 <img id='fan'
-                     src={ imgFanUrl }
+                     src={imgFanUrl}
                      width={200} height={200}
                 />
             </div>
