@@ -7,6 +7,7 @@ In Java,  implement a simple ceiling fan with these characteristics:
 Assessment format: Please provide your project via a link to your public code repository.
 
 ====
+
 This project is a simple spring-boot application with some APIs for retrieving and updating the fan sattings from a Mysql db,
 and a UI built by React JS. It contains display of the current fan speed and fan direction settings, a fan (png file) with simple animation,
 and 2 cords made by simple canvas Canvas API. User can pull the cords to change settings.
